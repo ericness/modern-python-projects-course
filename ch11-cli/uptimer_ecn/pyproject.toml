@@ -9,10 +9,13 @@ python = "^3.9"
 click = "^8.0.1"
 requests = "^2.26.0"
 colorama = "^0.4.4"
+
+[tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 Sphinx = "^4.2.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.scripts]
+uptimer = "uptimer_ecn.uptimer_ecn:check"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
