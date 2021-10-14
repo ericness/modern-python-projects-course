@@ -19,9 +19,8 @@ def colorize_status(url, status):
         3: "yellow",
         4: "bright_red",
         5: "red",
-        -1: "magenta",
     }
-    click.secho(f"{url} -> {status}", fg=colors.get(status // 100))
+    click.secho(f"{url} -> {status}", fg=colors.get(status // 100, "magenta"))
 
 
 @click.command()
@@ -32,9 +31,9 @@ def check(urls, daemon):
         for url in urls:
             status_code = check_url(url)
             colorize_status(url, status_code)
-            if not daemon:
-                break
-            sleep(1)
+        if not daemon:
+            break
+        sleep(1)
 
 
 

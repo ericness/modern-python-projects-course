@@ -3,8 +3,8 @@ import pytest
 import requests
 import sys
 from click.testing import CliRunner
-from uptimer import __version__
-from uptimer.uptimer import check, check_url, colorize_status
+from uptimer_ecn import __version__
+from uptimer_ecn.uptimer_ecn import check, check_url, colorize_status
 
 
 def test_version():
