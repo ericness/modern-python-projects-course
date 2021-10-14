@@ -36,6 +36,5 @@ def check(urls, daemon):
         sleep(1)
 
 
-
 if __name__ == '__main__':
     check()
